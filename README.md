@@ -20,10 +20,16 @@ simultaneous-restart events.
 ## Repo layout
 
 - `nilm_iawe.ipynb` — the full pipeline: data loading, preprocessing, windowing, both
-  model architectures, and the MQTT/TFLite deployment demo.
+  model architectures, and the MQTT/TFLite deployment demo. This copy has been run
+  end-to-end against the real iAWE data.
+- `iawe.h5` — the real iAWE dataset, pre-converted from the official raw CSVs (tracked
+  via Git LFS).
+- `results/` — figures from a real run: the household's power-cut distribution and a
+  week-long load trace.
 
 ## Setup
 
-Designed to run on Google Colab (uses Google Drive for dataset storage). Install
-`nilmtk` if converting from raw CSVs, or let the notebook fall back to synthetic data
-to explore the pipeline without the real dataset.
+Designed to run on Google Colab, but `iawe.h5` is included directly in this repo so it
+can also be run locally without a Drive mount. Install `nilmtk` if you'd rather convert
+from raw CSVs yourself, or let the notebook fall back to synthetic data to explore the
+pipeline without the real dataset.
